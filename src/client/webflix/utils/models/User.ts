@@ -1,3 +1,6 @@
 export default interface User {
-    emai: string;
+    email?: string;
+    name?: string;
+    nickname?: string;
+    picture?: string;
 }

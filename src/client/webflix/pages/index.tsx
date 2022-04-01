@@ -1,15 +1,13 @@
+import { useUser } from '@auth0/nextjs-auth0';
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
 const IndexPage = () => {
+  const { user } = useUser();
+
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
-        <h1>Hello Next.js 👋</h1>
-        <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+    <Layout title="Home | webflix">
+        <h1>Hello {user?.email}</h1>
     </Layout>
   );
 }
