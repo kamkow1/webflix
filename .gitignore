@@ -1,3 +1,4 @@
 /src/client/webflix/node_modules
 /src/client/webflix/yarn.lock
 /src/client/webflix/.next
+/src/client/webflix/.env.local
