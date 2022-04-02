@@ -1,11 +1,14 @@
 import { Navbar, Nav, NavItem, NavLink, NavbarBrand } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BsFilm } from 'react-icons/bs'
+import { useUser } from '@auth0/nextjs-auth0'
 
 const NavBar = (): JSX.Element => {
     const brandIcon = {
         marginRight: '10px'
     }
+
+    const { user } = useUser();
 
     return (
         <div>
@@ -21,9 +24,11 @@ const NavBar = (): JSX.Element => {
                     <NavItem>
                         <NavLink href="/api/auth/login">login</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink href="/api/auth/logout">logout</NavLink>
-                    </NavItem>
+                    {user && 
+                        <NavItem>
+                            <NavLink href="/api/auth/logout">logout</NavLink>
+                        </NavItem>
+                    }
                 </Nav>
             </Navbar>
         </div>
