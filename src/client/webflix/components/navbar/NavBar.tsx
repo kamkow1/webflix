@@ -22,11 +22,11 @@ const NavBar = (): JSX.Element => {
                         <NavLink href="/">home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/api/auth/login">login</NavLink>
+                        <NavLink href="/api/auth/login">sign in</NavLink>
                     </NavItem>
                     {user && 
                         <NavItem>
-                            <NavLink href="/api/auth/logout">logout</NavLink>
+                            <NavLink href="/api/auth/logout">sign out</NavLink>
                         </NavItem>
                     }
                 </Nav>
