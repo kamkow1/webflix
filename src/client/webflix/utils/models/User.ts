@@ -3,4 +3,8 @@ export default interface User {
     name?: string;
     nickname?: string;
     picture?: string;
+    email_verified?: boolean;
+    org_id?: string;
+    sub?: string;
+    updated_at?: string;
 }
