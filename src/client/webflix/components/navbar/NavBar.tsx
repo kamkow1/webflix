@@ -21,6 +21,9 @@ const NavBar = (): JSX.Element => {
                     <NavItem>
                         <NavLink href="/api/auth/login">login</NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink href="/api/auth/logout">logout</NavLink>
+                    </NavItem>
                 </Nav>
             </Navbar>
         </div>
