@@ -9,3 +9,8 @@
 
 /src/server/webflix-server/appsettings.json
 /src/server/webflix-server/appsettings.Development.json
+/src/server/webflix-server/obj
+/src/server/webflix-server/bin
+/src/server/webflix-server/.idea
+/src/server/webflix-server/.vscode
+/src/server/webflix-server/.vs
