@@ -20,8 +20,10 @@ public class UserController : ControllerBase
     {
        var foundUser =  await _userService.FindOne(user.Email);
 
-       if (foundUser is null)
+       if (foundUser is not null)
            return Conflict();
+
+       await _userService.RegisterUser(user);
 
        return Ok(new { message = "registration was successful" });
     }

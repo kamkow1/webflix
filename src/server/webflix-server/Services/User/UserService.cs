@@ -15,8 +15,6 @@ public class UserService : IUserService
 
     public async Task RegisterUser(User user)
     {
-        
-
         await _context.Users.AddAsync(user);
         await _context.SaveChangesAsync();
     }
