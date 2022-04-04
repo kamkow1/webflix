@@ -1,4 +1,11 @@
+# client
+
 /src/client/webflix/node_modules
 /src/client/webflix/yarn.lock
 /src/client/webflix/.next
 /src/client/webflix/.env.local
+
+# server
+
+/src/server/webflix-server/appsettings.json
+/src/server/webflix-server/appsettings.Development.json
