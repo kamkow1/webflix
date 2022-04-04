@@ -1,6 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using webflix_server.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+IConfiguration configuration = builder.Configuration;
+
+builder.Services.AddDbContextPool<ApplicationDbContext>(options => 
+    options.UseNpgsql(configuration.GetConnectionString("DEFAULT")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
