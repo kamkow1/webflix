@@ -24,4 +24,6 @@ public class User
 
     [Column("last_login", TypeName = "timestamp")]
     public DateTime? LastLogin { get; set; }
+
+    public virtual ICollection<SocialLink> SocialLinks { get; set; }
 }
