@@ -13,5 +13,10 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<User> Users { get; set; }
 
-    public DbSet<SocialLink> SocialLinks { get; set; } 
+    public DbSet<SocialLink> SocialLinks { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.UseSerialColumns();
+    }
 }
