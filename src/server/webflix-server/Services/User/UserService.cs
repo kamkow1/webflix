@@ -23,7 +23,8 @@ public class UserService : IUserService
 
     public async Task<User> FindOne(object value)
     {
+        var result = await _context.Users.FirstOrDefaultAsync(u => u.Email == value.ToString());
         
-        return await _context.Users.FirstOrDefaultAsync(u => u.Email == value.ToString());
+        return result;
     }
 }
